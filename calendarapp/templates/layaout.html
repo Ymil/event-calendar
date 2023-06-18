@@ -1,0 +1,25 @@
+
+{% extends "base/base.html" %}
+
+{% block content %}
+
+
+s
+<main class="app-content">
+    <div class="app-title">
+        {% block breadcrumb %}
+        {% endblock breadcrumb %}
+    </div>
+    {% block eventcalendar_content %}
+    {% endblock eventcalendar_content %}
+</main>
+<!-- Essential javascripts for application to work-->
+{% include 'base/js.html' %}
+{% include 'base/css.html' %}
+
+{% block eventcalendar_extrascripts %}
+{% endblock eventcalendar_extrascripts %}
+{% block extracss %}
+{% endblock extracss %}
+
+{% endblock content %}

@@ -2,28 +2,23 @@
 <html lang="en">
     {% load static %}
     <head>
-        <meta name="description" content="Event Dashboard" />
+        <meta name="description" eventcalendar_content="Event Dashboard" />
         <!-- Twitter meta-->
-        <meta property="twitter:card" content="summary_large_image" />
-        <meta property="twitter:site" content="@sajib1066" />
-        <meta property="twitter:creator" content="@sajib1066" />
+        <meta property="twitter:card" eventcalendar_content="summary_large_image" />
+        <meta property="twitter:site" eventcalendar_content="@sajib1066" />
+        <meta property="twitter:creator" eventcalendar_content="@sajib1066" />
         <!-- Open Graph Meta-->
-        <meta property="og:type" content="website" />
-        <meta property="og:site_name" content="Vali Admin" />
-        <meta property="og:title" content="Vali - Free Bootstrap 4 admin theme" />
-        <meta property="og:url" content="https://sajib1066.github.io/" />
-        <meta property="og:image" content="https://sajib1066.github.io/images/me.jpg" />
-        <meta property="og:description" content="Event Dashboard" />
+        <meta property="og:type" eventcalendar_content="website" />
+        <meta property="og:site_name" eventcalendar_content="Vali Admin" />
+        <meta property="og:title" eventcalendar_content="Vali - Free Bootstrap 4 admin theme" />
+        <meta property="og:url" eventcalendar_content="https://sajib1066.github.io/" />
+        <meta property="og:image" eventcalendar_content="https://sajib1066.github.io/images/me.jpg" />
+        <meta property="og:description" eventcalendar_content="Event Dashboard" />
         <title>{% block title %}{% endblock title  %}</title>
         <meta charset="utf-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <!-- Main CSS-->
-        <link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}" />
-        <!-- Font-icon css-->
-        <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
-        {% block extracss %}
-        {% endblock extracss %}
+        <meta http-equiv="X-UA-Compatible" eventcalendar_content="IE=edge" />
+        <meta name="viewport" eventcalendar_content="width=device-width, initial-scale=1" />
+
     </head>
     <body class="app sidebar-mini">
         <!-- Navbar-->
@@ -42,7 +37,7 @@
                     <a class="app-nav__item" href="#" data-toggle="dropdown" aria-label="Show notifications"><i class="fa fa-bell-o fa-lg"></i></a>
                     <ul class="app-notification dropdown-menu dropdown-menu-right">
                         <li class="app-notification__title">You have 4 new notifications.</li>
-                        <div class="app-notification__content">
+                        <div class="app-notification__eventcalendar_content">
                             <li>
                                 <a class="app-notification__item" href="javascript:;">
                                     <span class="app-notification__icon">
@@ -76,7 +71,7 @@
                                     </div>
                                 </a>
                             </li>
-                            <div class="app-notification__content">
+                            <div class="app-notification__eventcalendar_content">
                                 <li>
                                     <a class="app-notification__item" href="javascript:;">
                                         <span class="app-notification__icon">
@@ -125,9 +120,6 @@
                         <li>
                             <a class="dropdown-item" href="#"><i class="fa fa-user fa-lg"></i> Profile</a>
                         </li>
-                        <li>
-                            <a class="dropdown-item" href="{% url 'accounts:signout' %}"><i class="fa fa-sign-out fa-lg"></i> Sign Out</a>
-                        </li>
                     </ul>
                 </li>
             </ul>
@@ -168,17 +160,7 @@
                 </li>
             </ul>
         </aside>
-        <main class="app-content">
-            <div class="app-title">
-                {% block breadcrumb %}
-                {% endblock breadcrumb %}
-            </div>
-            {% block content %}
-            {% endblock content %}
-        </main>
-        <!-- Essential javascripts for application to work-->
-        {% include 'base/js.html' %}
-        {% block extrascripts %}
-        {% endblock extrascripts %}
+        {% block content %}
+        {% endblock content %}
     </body>
 </html>
