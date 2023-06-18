@@ -3,7 +3,11 @@ from django.db import models
 from django.urls import reverse
 
 from calendarapp.models import EventAbstract
-from accounts.models import User
+# from accounts.models import User
+
+# Obtener modelo de usuarios a partir de la configuración AUTH_USER_MODEL
+from django.conf import settings
+User = settings.AUTH_USER_MODEL
 
 
 class EventManager(models.Manager):
