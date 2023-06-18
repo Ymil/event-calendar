@@ -5,12 +5,15 @@ with open('requirements.txt') as f:
 
 setup(
     name='django-event-calendar',
-    version='1.0',
-    packages=find_packages(),
+    version='1.0.0',
     include_package_data=True,
     license='MIT',
     description='Event Calendar for Django',
     long_description=open('README.md').read(),
+    packages=[
+        "eventcalendar",
+        "calendarapp"
+    ],
     install_requires=requirements,
     classifiers=[
         'Environment :: Web Environment',

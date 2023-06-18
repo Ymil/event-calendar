@@ -39,7 +39,6 @@ def next_month(d):
 
 
 class CalendarView(LoginRequiredMixin, generic.ListView):
-    login_url = "accounts:signin"
     model = Event
     template_name = "calendar.html"
 
@@ -111,8 +110,7 @@ class EventMemberDeleteView(generic.DeleteView):
 
 
 class CalendarViewNew(LoginRequiredMixin, generic.View):
-    login_url = "accounts:signin"
-    template_name = "calendarapp/calendar.html"
+    template_name = "calendar.html"
     form_class = EventForm
 
     def get(self, request, *args, **kwargs):
