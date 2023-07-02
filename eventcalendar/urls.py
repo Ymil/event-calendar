@@ -21,5 +21,5 @@ from .views import DashboardView
 
 urlpatterns = [
     path("calendar", DashboardView.as_view(), name="dashboard"),
-    path("calendar/", include("calendarapp.urls")),
+    path("", include("calendarapp.urls")),
 ]

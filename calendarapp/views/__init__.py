@@ -7,6 +7,7 @@ from .other_views import (
     event_details,
     add_eventmember,
     EventMemberDeleteView,
+    EventDeleteView
 )
 
 

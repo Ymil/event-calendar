@@ -7,8 +7,8 @@ Event Details
 {% block content %}
     <div class="container">
         <div class="clearfix">
-            <a class="btn btn-primary left" href="{% url 'calendarapp:calendar' %}"> Calendar </a>
-            <a class="btn btn-info right mr-2" href="{% url 'calendarapp:event_edit' event.pk %}"> Edit Event </a>
+            <a class="btn btn-primary left" href="{% url 'calendarapp:calendar' %}"> {{ _("Calendar") }} </a>
+            <a class="btn btn-info right mr-2" href="{% url 'calendarapp:event_edit' event.pk %}"> {{ _("Edit Event") }} </a>
         </div>
 
         <div class="clearfix">
@@ -19,17 +19,17 @@ Event Details
         </div>
         <hr>
         <div class="clearfix">
-            <h4 class="left" > Members of this Event</h4>
+            <h4 class="left" > {{ _("Members of this Event") }}</h4>
             <a class="btn btn-success right" href="{% url 'calendarapp:add_eventmember' event.id %}"> Add Member </a>
         </div>
         <table class="table table-bordered">
             <thead>
                 <tr>
                   <th style="width: 10px">#</th>
-                  <th>Name</th>
-                  <th>Username</th>
-                  <th>Email</th>
-                  <th>Action</th>
+                  <th>{{ _("Name") }}</th>
+                  <th>{{ _("Username") }}</th>
+                  <th>{{ _("Email") }}</th>
+                  <th>{{ _("Action") }}</th>
                 </tr>
               </thead>
               <tbody>

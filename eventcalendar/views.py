@@ -2,8 +2,9 @@ from django.views.generic import View
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.shortcuts import render
 
-from calendarapp.models import Event
+from calendarapp import get_calendarapp_model
 
+Event = get_calendarapp_model()
 
 class DashboardView(LoginRequiredMixin, View):
     template_name = "dashboard.html"

@@ -103,6 +103,12 @@ def add_eventmember(request, event_id):
     return render(request, "add_member.html", context)
 
 
+class EventDeleteView(generic.DeleteView):
+    model = Event
+    template_name = "event_delete.html"
+    success_url = reverse_lazy("calendarapp:calendar")
+
+
 class EventMemberDeleteView(generic.DeleteView):
     model = EventMember
     template_name = "event_delete.html"
